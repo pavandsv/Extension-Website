@@ -98,30 +98,22 @@ export default function EnhancedContactUs() {
       </div>
 
       {/* Image + Form */}
-      <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
-        <div className="relative">
-          <img
-            src="https://fristinetech.com/wp-content/uploads/2020/09/group-16.png"
-            alt="Contact Us"
-            className="w-full rounded-xl object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/60 to-transparent pointer-events-none rounded-xl" />
-        </div>
+   <div className="grid md:grid-cols-1 items-center px-4 md:px-8">
+  <div
+    ref={formRef}
+    className="rounded-2xl overflow-hidden border border-gray-100 bg-white"
+  >
+    <iframe
+      title="Zoho Extension Website - Contact Form"
+      src="https://forms.zohopublic.com/dsvcorp1/form/ZohoExtensionWebsiteContactForm/formperma/iGZC7PsSDpE2qA2onHYrzzOkz1PbyszciRAo_q_o_ck"
+      frameBorder="0"
+      loading="lazy"
+      allowFullScreen
+      className="w-full h-[1050px]"
+    />
+  </div>
+</div>
 
-        <div
-          ref={formRef}
-          className="rounded-2xl overflow-hidden border border-gray-100 bg-white"
-        >
-          <iframe
-            title="Zoho Extension Website - Contact Form"
-            src="https://forms.zohopublic.com/dsvcorp1/form/ZohoExtensionWebsiteContactForm/formperma/iGZC7PsSDpE2qA2onHYrzzOkz1PbyszciRAo_q_o_ck"
-            frameBorder="0"
-            loading="lazy"
-            allowFullScreen
-            className="w-full h-[500px]"
-          />
-        </div>
-      </div>
 
       {/* Contact Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 max-w-4xl mx-auto">
