@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={raleway.variable}>
+    <html lang="en" className={raleway.variable} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <ConditionalLayout>{children}</ConditionalLayout>
 

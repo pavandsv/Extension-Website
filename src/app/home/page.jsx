@@ -2,19 +2,18 @@ import React from "react";
 import HeroSection from "../../components/sections/HeroSection";
 import ProducSections from "../../components/sections/ProductsSections";
 import TeamSection from "../../components/sections/TeamSection";
-import ClientSection from "../../components/sections/ClientSection";
 import CallToAction from "../../components/sections/CallToAction";
 
 const Page = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <ProducSections />
       <TeamSection />
-      {/* <ClientSection /> */}
       <CallToAction />
-    </>
+    </div>
   );
 };
+
 
 export default Page;

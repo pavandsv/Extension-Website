@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link
-      href={`/extension-details/${product.id}`}
+      href={`/extension-details/${product.href}`}
       target="_blank"
       rel="noopener noreferrer"
       className="group block w-full h-[300px]"

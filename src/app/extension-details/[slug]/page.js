@@ -22,7 +22,7 @@ export default function ExtensionDetailPage() {
   );
 
   const { slug } = useParams();
-  const productData = products.find((p) => p.id === Number(slug));
+const productData = products.find((p) => p.href === `/${slug}`);
 
   // Track if viewport is md and up
   const [isMdUp, setIsMdUp] = React.useState(false);

@@ -12,7 +12,7 @@ export default function ConditionalLayout({ children }) {
   return (
     <>
       {!hideHeaderFooter && <Header />}
-      <main className="flex-1 px-4 py-6">{children}</main>
+      <main>{children}</main>
       {!hideHeaderFooter && <Footer />}
     </>
   );

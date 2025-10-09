@@ -2,9 +2,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-// Premium AboutUs section with subtle glassmorphism, gradient backdrops, and refined animations
-// No extra UI libraries required; uses Tailwind CSS + GSAP only.
-
 const AboutUs = () => {
   const headingRef = useRef(null);
   const textRef = useRef(null);
@@ -14,14 +11,14 @@ const AboutUs = () => {
   const productRefs = useRef([]);
   const badgeRef = useRef(null);
   const zohoLogoTopRef = useRef(null);
-  // ensure the array has stable length
+
   const products = [
-    ["zohocrm.png", "Zoho CRM"],
-    ["zohobooks.png", "Zoho Books"],
-    ["zohomail.png", "Zoho Mail"],
-    ["zohoprojects.png", "Zoho Projects"],
-    ["zohodesk.png", "Zoho Desk"],
-    ["zohopeople.png", "Zoho People"],
+    ["zohocrm.png", "Zoho CRM", "https://www.zoho.com/crm/"],
+    ["zohobooks.png", "Zoho Books", "https://www.zoho.com/books/"],
+    ["zohomail.png", "Zoho Mail", "https://www.zoho.com/mail/"],
+    ["zohoprojects.png", "Zoho Projects", "https://www.zoho.com/projects/"],
+    ["zohodesk.png", "Zoho Desk", "https://www.zoho.com/desk/"],
+    ["zohopeople.png", "Zoho People", "https://www.zoho.com/people/"],
   ];
 
   useEffect(() => {
@@ -75,19 +72,17 @@ const AboutUs = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Decorative premium gradients */}
+      {/* Decorative background gradients */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        {/* soft radial backdrop */}
         <div className="absolute -top-20 -left-20 h-[36rem] w-[36rem] rounded-full bg-gradient-to-br from-blue-200 via-sky-100 to-indigo-200 blur-3xl opacity-70" />
         <div className="absolute bottom-[-10%] right-[-10%] h-[40rem] w-[40rem] rounded-full bg-gradient-to-tr from-indigo-200 via-violet-100 to-fuchsia-200 blur-3xl opacity-60" />
-        {/* subtle grid overlay */}
         <div className="absolute inset-0 [background:radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.06)_1px,transparent_1px)] [background-size:20px_20px] opacity-40" />
       </div>
 
       {/* SECTION: ABOUT DSV CORP */}
       <section className="px-6 md:px-12 lg:px-16 xl:px-24 py-20">
         <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-14">
-          {/* Text Content */}
+          {/* Text */}
           <div className="space-y-6 text-center md:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/60 px-3 py-1 text-xs tracking-wide text-slate-700 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -96,7 +91,8 @@ const AboutUs = () => {
 
             <h2
               ref={headingRef}
-              className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+              className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900"
+            >
               <span className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent">
                 About DSV Corporation
               </span>
@@ -104,19 +100,26 @@ const AboutUs = () => {
 
             <p
               ref={textRef}
-              className="mx-auto md:mx-0 max-w-2xl text-[1.05rem] leading-relaxed text-slate-700">
-              DSV Corp is a group of companies. <strong>FI Digital</strong> &amp; <strong>Fristine Infotech</strong> are part of the DSV Group. We started with a simple idea—
-              use technology to enrich everyday life. Today, we empower people and businesses with thoughtful design and robust engineering—and we’re proud to be recognized for our innovation and execution.
+              className="mx-auto md:mx-0 max-w-2xl text-[1.05rem] leading-relaxed text-slate-700"
+            >
+              DSV Corp is a group of companies.{" "}
+              <strong>FI Digital</strong> &amp;{" "}
+              <strong>Fristine Infotech</strong> are part of the DSV Group. We
+              started with a simple idea— use technology to enrich everyday
+              life. Today, we empower people and businesses with thoughtful
+              design and robust engineering—and we’re proud to be recognized for
+              our innovation and execution.
             </p>
 
             <img
               ref={badgeRef}
               src="/logo/zohopartner.jpg"
               alt="Zoho Premium Partner"
-              className="w-44 md:w-52 mx-auto md:mx-0 mt-2 rounded-2xl border border-white/70 shadow-[0_8px_30px_rgb(0,0,0,0.08)]"/>
+              className="w-44 md:w-52 mx-auto md:mx-0 mt-2 rounded-2xl border border-white/70 shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+            />
           </div>
 
-          {/* DSV Illustration */}
+          {/* Illustration */}
           <div ref={imageRef} className="relative flex justify-center md:justify-end">
             <div className="relative rounded-3xl border border-white/60 bg-white/60 p-4 shadow-xl backdrop-blur-md">
               <img
@@ -124,19 +127,17 @@ const AboutUs = () => {
                 alt="Illustration representing DSV Corp"
                 className="w-72 md:w-[22rem] h-auto object-contain drop-shadow-xl rounded-2xl"
               />
-              {/* subtle glow */}
               <div className="pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-tr from-white/40 to-transparent blur-2xl" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* HAIRLINE DIVIDER */}
+      {/* Divider */}
       <div className="mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-slate-300/60 to-transparent" />
 
       {/* SECTION: WHAT IS ZOHO */}
       <section className="px-6 md:px-12 lg:px-16 xl:px-24 py-20 text-center">
-        {/* Zoho Logo above heading */}
         <div className="mb-6">
           <img
             ref={zohoLogoTopRef}
@@ -148,7 +149,8 @@ const AboutUs = () => {
 
         <h2
           ref={zohoHeadingRef}
-          className="text-3xl md:text-4xl font-extrabold text-slate-900">
+          className="text-3xl md:text-4xl font-extrabold text-slate-900"
+        >
           <span className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent">
             What is Zoho?
           </span>
@@ -156,21 +158,31 @@ const AboutUs = () => {
 
         <p
           ref={zohoTextRef}
-          className="mx-auto mt-4 max-w-3xl text-[1.05rem] leading-relaxed text-slate-700">
-          Zoho Corporation is a global technology company offering a suite of 50+ cloud applications across CRM, email, finance, projects, and collaboration—built with privacy-first principles and designed to scale from startups to enterprises.
+          className="mx-auto mt-4 max-w-3xl text-[1.05rem] leading-relaxed text-slate-700"
+        >
+          Zoho Corporation is a global technology company offering a suite of
+          50+ cloud applications across CRM, email, finance, projects, and
+          collaboration—built with privacy-first principles and designed to
+          scale from startups to enterprises.
         </p>
 
         <div className="mx-auto mt-12 max-w-6xl">
-          <p className="mb-5 text-sm uppercase tracking-wider text-slate-500">Popular Zoho applications</p>
+          <p className="mb-5 text-sm uppercase tracking-wider text-slate-500">
+            Popular Zoho applications
+          </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-6">
-            {products.map(([img, label], index) => (
-              <div
+            {products.map(([img, label, link], index) => (
+              <a
                 key={label}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
                 ref={(el) => {
                   if (el) productRefs.current[index] = el;
                 }}
-                className="group relative flex flex-col items-center rounded-2xl border border-white/60 bg-white/60 p-4 shadow-md backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                className="group relative flex flex-col items-center rounded-2xl border border-white/60 bg-white/60 p-4 shadow-md backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
                 <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br from-white/70 to-transparent" />
                 <img
                   src={`/logo/${img}`}
@@ -180,7 +192,7 @@ const AboutUs = () => {
                 <span className="relative z-[1] text-sm font-semibold text-slate-800">
                   {label}
                 </span>
-              </div>
+              </a>
             ))}
           </div>
         </div>

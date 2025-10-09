@@ -14,6 +14,7 @@ const products = [
     helpdoc: "https://fristinetech.com/help-documentation-google-map/",
     buynow:
       "https://marketplace.zoho.com/app/crm/google-address-finder-for-zoho-crm",
+    href: "/google-address-finder-for-zoho-crm",
   },
   {
     id: 2,
@@ -31,6 +32,7 @@ const products = [
       "https://fristinetech.com/zoho-market-place-auto-currency-update-hourly-app-help-documentation/",
     buynow:
       "https://marketplace.zoho.com/app/crm/auto-currency-exchange-rate-updater-for-zoho-crm",
+    href: "/auto-currency-exchange-rate-updater-for-zoho-crm",
   },
   {
     id: 3,
@@ -48,6 +50,7 @@ const products = [
       "https://fristinetech.com/help-documentation-export-ticket-extension/",
     buynow:
       "https://marketplace.zoho.com/app/desk/export-tickets-with-filters-for-zoho-desk",
+    href: "/export-tickets-with-filters-for-zoho-desk",
   },
   {
     id: 4,
@@ -64,6 +67,7 @@ const products = [
     helpdoc: "https://fristinetech.com/help-documentation-for-stripe-payment/",
     buynow:
       "https://marketplace.zoho.com/app/crm/stripe-payment-extension-for-zoho-crm",
+    href: "/stripe-payment-extension-for-zoho-crm",
   },
   {
     id: 5,
@@ -81,6 +85,7 @@ const products = [
       "https://fristinetech.com/help-documentation-for-organogram-extension-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/organogram-extension-for-zoho-crm",
+    href: "/organogram-extension-for-zoho-crm",
   },
   {
     id: 6,
@@ -96,6 +101,7 @@ const products = [
     product: "crm",
     helpdoc: "https://fristinetech.com/visitor-tracking/user-guide/index.php",
     buynow: "https://marketplace.zoho.com/app/customapps/visitor-tracking",
+    href: "/visitor-tracking",
   },
   {
     id: 7,
@@ -113,6 +119,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentaion-aws-s3-file-uploader-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/aws-s3-file-uploader-for-zoho-crm",
+    href: "/aws-s3-file-uploader-for-zoho-crm",
   },
   {
     id: 8,
@@ -130,6 +137,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentaion-analytics-hub-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/analytics-hub-extension-for-zoho-crm",
+    href: "/analytics-hub-extension-for-zoho-crm",
   },
   {
     id: 9,
@@ -147,6 +155,7 @@ const products = [
       "https://fristinetech.com/help-documentation-for-bulk-update-ticket/",
     buynow:
       "https://marketplace.zoho.com/app/desk/bulk-update-existing-tickets-in-zoho-desk-based-on-ticket-id",
+    href: "/bulk-update-existing-tickets-in-zoho-desk-based-on-ticket-id",
   },
   {
     id: 10,
@@ -164,6 +173,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/mailchimp-extension-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/mailchimp-for-zoho-crm-by-dsvcorp",
+    href: "/mailchimp-for-zoho-crm",
   },
   {
     id: 11,
@@ -180,6 +190,7 @@ const products = [
     helpdoc:
       "https://dsvcorp.com.au/help-documentation/help-documentaion-xero-sync-for-zoho-crm/",
     buynow: "https://marketplace.zoho.com/app/crm/xero-sync-for-zoho-crm",
+    href: "/xero-sync-for-zoho-crm",
   },
   {
     id: 12,
@@ -197,6 +208,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation-for-best-candidate-for-zoho-recruit/",
     buynow:
       "https://marketplace.zoho.com/app/recruit/best-candidate-for-zoho-recruit",
+    href: "/best-candidate-for-zoho-recruit",
   },
   {
     id: 13,
@@ -214,6 +226,7 @@ const products = [
       "https://fristinetech.com/help-documentation-google-map-for-zoho-recruit/",
     buynow:
       "https://marketplace.zoho.com/app/recruit/google-address-finder-for-zoho-recruit",
+    href: "/google-address-finder-for-zoho-recruit",
   },
   {
     id: 14,
@@ -231,6 +244,7 @@ const products = [
       "https://fristinetech.com/help-documentation-for-sharepoint-drive/",
     buynow:
       "https://marketplace.zoho.com/app/crm/sharepoint-drive-for-zoho-crm",
+    href: "/sharepoint-drive-for-zoho-crm",
   },
   {
     id: 15,
@@ -248,6 +262,7 @@ const products = [
       "https://help.fristinetech.com/portal/en/kb/articles/onedrive-for-zoho-crm",
     buynow:
       "https://marketplace.zoho.com/app/crm/one-drive-extension-for-zoho-crm",
+    href: "/onedrive-extension-for-zoho-crm",
   },
   {
     id: 16,
@@ -265,6 +280,7 @@ const products = [
       "https://help.fristinetech.com/portal/en/kb/articles/ai-ticket-sentiment-analyzer-for-zoho-desk",
     buynow:
       "https://marketplace.zoho.com/app/desk/ai-ticket-sentiment-analyzer-for-zoho-desk",
+    href: "/ai-ticket-sentiment-analyzer-for-zoho-desk",
   },
   {
     id: 17,
@@ -281,6 +297,7 @@ const products = [
     helpdoc:
       "https://dsvcorp.com.au/help-documentation/help-documentation-for-bulk-import-for-zoho-crm/",
     buynow: "https://marketplace.zoho.com/app/crm/bulk-import-for-zoho-crm",
+    href: "/bulk-import-for-zoho-crm",
   },
   {
     id: 18,
@@ -298,6 +315,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentaion-dropbox-extension-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/dropbox-extension-for-zoho-crm",
+    href: "/dropbox-extension-for-zoho-crm",
   },
   {
     id: 19,
@@ -313,6 +331,7 @@ const products = [
     product: "desk",
     helpdoc: "https://fristinetech.com/help-documentation-for-ticket-lock/",
     buynow: "https://marketplace.zoho.com/app/desk/ticket-locking-in-zoho-desk",
+    href: "/ticket-locking-in-zoho-desk",
   },
   {
     id: 20,
@@ -330,6 +349,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentation-razorpay-extension-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/razorpay-extension-for-zoho-crm",
+    href: "/razorpay-extension-for-zoho-crm",
   },
   {
     id: 21,
@@ -346,6 +366,7 @@ const products = [
     helpdoc:
       "https://help.fidigital.com.au/portal/en/kb/articles/geotracker-for-zoho-crm#Contents",
     buynow: "https://marketplace.zoho.com/app/crm/geotracker-for-zoho-crm",
+    href: "/geotracker-for-zoho-crm",
   },
   {
     id: 22,
@@ -361,6 +382,7 @@ const products = [
     helpdoc: "https://fristinetech.com/help-documentation-google-drive/",
     buynow:
       "https://marketplace.zoho.com/app/crm/google-drive-extension-for-zoho-crm",
+    href: "/google-drive-extension-for-zoho-crm",
   },
   {
     id: 23,
@@ -378,6 +400,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation-for-auto-currency-update-for-zoho-book/",
     buynow:
       "https://marketplace.zoho.com/app/books/auto-currency-update-for-zoho-books",
+    href: "/auto-currency-update-for-zoho-books",
   },
   {
     id: 24,
@@ -395,6 +418,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentaion-email-translator-extension-for-zoho-desk/",
     buynow:
       "https://marketplace.zoho.com/app/desk/email-translator-extension-for-zoho-desk",
+    href: "/email-translator-extension-for-zoho-desk",
   },
   {
     id: 25,
@@ -412,6 +436,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentation-email-verification-extension-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/email-verification-extension-for-zoho-crm",
+    href: "/email-verification-extension-for-zoho-crm",
   },
   {
     id: 26,
@@ -429,6 +454,7 @@ const products = [
       "https://help.fristinetech.com/portal/en/kb/articles/tickets-to-lead-for-zoho-desk",
     buynow:
       "https://marketplace.zoho.com/app/desk/ticket-to-lead-for-zoho-desk",
+    href: "/ticket-to-lead-for-zoho-desk",
   },
   {
     id: 27,
@@ -446,6 +472,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentaion-wati-whatsapp-integration-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/wati-whatsapp-integration-for-zoho-crm#overview",
+    href: "/wati-whatsapp-integration-for-zoho-crm",
   },
   {
     id: 28,
@@ -463,6 +490,7 @@ const products = [
       "https://dsvcorp.com.au/help-documentation/help-documentaion-twilio-sms-whatsapp-integration-for-zoho-crm/",
     buynow:
       "https://marketplace.zoho.com/app/crm/twilio-sms-and-whatsapp-extension-for-zoho-crm#overview",
+    href: "/twilio-sms-and-whatsapp-extension-for-zoho-crm",
   },
 ];
 

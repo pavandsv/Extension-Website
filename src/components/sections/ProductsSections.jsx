@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link
-      href={`/extension-details/${product.id}`}
+      href={`/extension-details/${product.href}`}
       target="_blank"
       rel="noopener noreferrer"
       className="group block w-full h-[300px]"
@@ -32,7 +32,7 @@ const ProductCard = ({ product }) => {
             className="w-full h-full object-cover rounded-t-xl"
           />
         </div>
-        <div className="h-[30%] w-full bg-blue-100 flex flex-col justify-center items-center text-center px-3 py-2 rounded-b-xl shadow-inner">
+        <div style={{"padding":"50px"}} className="h-[30%] w-full bg-blue-100 flex flex-col justify-center items-center text-center px-3 py-2 rounded-b-xl shadow-inner">
           <div className="relative w-full">
             <h3
               ref={nameRef}
