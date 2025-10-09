@@ -32,7 +32,10 @@ const ProductCard = ({ product }) => {
             className="w-full h-full object-cover rounded-t-xl"
           />
         </div>
-        <div style={{"padding":"50px"}} className="h-[30%] w-full bg-blue-100 flex flex-col justify-center items-center text-center px-3 py-2 rounded-b-xl shadow-inner">
+        <div
+          style={{ padding: "50px" }}
+          className="h-[30%] w-full bg-blue-100 flex flex-col justify-center items-center text-center px-3 py-2 rounded-b-xl shadow-inner"
+        >
           <div className="relative w-full">
             <h3
               ref={nameRef}
@@ -107,10 +110,16 @@ const ProducSections = () => {
             {renderSlides(row1)}
           </Swiper>
 
-          <button className="top-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full">
+          <button
+            style={{ cursor: "pointer" }}
+            className="top-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full"
+          >
             ◀
           </button>
-          <button className="top-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full">
+          <button
+            style={{ cursor: "pointer" }}
+            className="top-next absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full"
+          >
             ▶
           </button>
         </div>
@@ -138,10 +147,16 @@ const ProducSections = () => {
             {renderSlides(row2)}
           </Swiper>
 
-          <button className="bottom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full">
+          <button
+            style={{ cursor: "pointer" }}
+            className="bottom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full"
+          >
             ◀
           </button>
-          <button className="bottom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full">
+          <button
+            style={{ cursor: "pointer" }}
+            className="bottom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full"
+          >
             ▶
           </button>
         </div>
