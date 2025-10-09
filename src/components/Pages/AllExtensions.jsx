@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Text Area */}
-        <div className="h-[30%] w-full bg-blue-100 flex flex-col justify-center items-center text-center px-3 py-2 rounded-b-xl">
+        <div style={{"padding":"50px"}} className="h-[30%] w-full bg-blue-100 flex flex-col justify-center items-center text-center px-3 py-2 rounded-b-xl">
           {/* Name */}
           <div className="relative w-full">
             <h3
