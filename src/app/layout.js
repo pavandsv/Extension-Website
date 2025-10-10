@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Raleway } from "next/font/google";
-import ConditionalLayout from "./ConditionalLayout.js";
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -15,13 +16,20 @@ const raleway = Raleway({
 export const metadata = {
   title: "DSV Extensions",
   description: "A Next.js project",
+  icons: {
+    icon: "/logo/fevicon.png", 
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={raleway.variable} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <ConditionalLayout>{children}</ConditionalLayout>
+        <Header />
+
+        <main className="flex-grow">{children}</main>
+
+        <Footer />
 
         {/* Inline Zoho setup script */}
         <script
@@ -39,8 +47,6 @@ export default function RootLayout({ children }) {
           src="https://salesiq.zohopublic.com/widget?wc=siqd5554e2b4cb32464c280697bfa50a51cc07229c8920b4b9dc4247500c1733a43"
           defer
         ></script>
-
-        
       </body>
     </html>
   );

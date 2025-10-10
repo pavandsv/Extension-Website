@@ -9,7 +9,7 @@ const products = [
       "Saves time entering address field data",
       "Find and auto-fill addresses when creating and editing pages",
     ],
-    image: "/products/address-verifier.png",
+    image: "/products/google-address-finder.png",
     product: "crm",
     helpdoc: "https://fristinetech.com/help-documentation-google-map/",
     buynow:

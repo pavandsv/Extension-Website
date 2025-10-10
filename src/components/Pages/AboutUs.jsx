@@ -29,36 +29,11 @@ const AboutUs = () => {
       { y: -40, opacity: 0 },
       { y: 0, opacity: 1 }
     )
-      .fromTo(
-        textRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1 },
-        "<"
-      )
-      .fromTo(
-        imageRef.current,
-        { scale: 0.92, opacity: 0 },
-        { scale: 1, opacity: 1 },
-        "<"
-      )
-      .fromTo(
-        badgeRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1 },
-        "<"
-      )
-      .fromTo(
-        zohoLogoTopRef.current,
-        { y: -20, opacity: 0 },
-        { y: 0, opacity: 1 },
-        "+=0.3"
-      )
-      .fromTo(
-        zohoHeadingRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1 },
-        "<"
-      )
+      .fromTo(textRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, "<")
+      .fromTo(imageRef.current, { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1 }, "<")
+      .fromTo(badgeRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, "<")
+      .fromTo(zohoLogoTopRef.current, { y: -20, opacity: 0 }, { y: 0, opacity: 1 }, "+=0.3")
+      .fromTo(zohoHeadingRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1 }, "<")
       .fromTo(zohoTextRef.current, { opacity: 0 }, { opacity: 1 }, "<")
       .fromTo(
         productRefs.current,
@@ -71,20 +46,20 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Decorative background gradients */}
+    <div className="relative overflow-hidden bg-gradient-to-r from-[#f3f6ff] via-[#eef2ff] to-[#f7f9ff]">
+      {/* Soft Background Effects */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-20 -left-20 h-[36rem] w-[36rem] rounded-full bg-gradient-to-br from-blue-200 via-sky-100 to-indigo-200 blur-3xl opacity-70" />
         <div className="absolute bottom-[-10%] right-[-10%] h-[40rem] w-[40rem] rounded-full bg-gradient-to-tr from-indigo-200 via-violet-100 to-fuchsia-200 blur-3xl opacity-60" />
-        <div className="absolute inset-0 [background:radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.06)_1px,transparent_1px)] [background-size:20px_20px] opacity-40" />
+        <div className="absolute inset-0 [background:radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.06)_1px,transparent_1px)] [background-size:20px_20px] opacity-30" />
       </div>
 
       {/* SECTION: ABOUT DSV CORP */}
-      <section className="px-6 md:px-12 lg:px-16 xl:px-24 py-20">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-14">
-          {/* Text */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-2 items-center gap-14">
+          {/* Text Section */}
           <div className="space-y-6 text-center md:text-left">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/60 px-3 py-1 text-xs tracking-wide text-slate-700 shadow-sm backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/70 px-3 py-1 text-xs tracking-wide text-slate-700 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
               DSV Group • Technology & Innovation
             </span>
@@ -105,10 +80,10 @@ const AboutUs = () => {
               DSV Corp is a group of companies.{" "}
               <strong>FI Digital</strong> &amp;{" "}
               <strong>Fristine Infotech</strong> are part of the DSV Group. We
-              started with a simple idea— use technology to enrich everyday
+              started with a simple idea — use technology to enrich everyday
               life. Today, we empower people and businesses with thoughtful
-              design and robust engineering—and we’re proud to be recognized for
-              our innovation and execution.
+              design and robust engineering — and we’re proud to be recognized
+              for our innovation and execution.
             </p>
 
             <img
@@ -121,13 +96,15 @@ const AboutUs = () => {
 
           {/* Illustration */}
           <div ref={imageRef} className="relative flex justify-center md:justify-end">
-            <div className="relative rounded-3xl border border-white/60 bg-white/60 p-4 shadow-xl backdrop-blur-md">
+            <div className="relative rounded-3xl p-0 shadow-2xl backdrop-blur-md overflow-hidden">
+              {/* Soft glow behind image */}
+              <div className="absolute -inset-6 bg-gradient-to-tr from-blue-300/40 via-purple-200/30 to-pink-200/40 blur-3xl rounded-full"></div>
+
               <img
                 src="/logo/about-us.png"
                 alt="Illustration representing DSV Corp"
-                className="w-72 md:w-[22rem] h-auto object-contain drop-shadow-xl rounded-2xl"
+                className="relative w-80 md:w-[26rem] lg:w-[30rem] h-auto object-contain drop-shadow-2xl rounded-2xl z-10"
               />
-              <div className="pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-tr from-white/40 to-transparent blur-2xl" />
             </div>
           </div>
         </div>
@@ -137,63 +114,65 @@ const AboutUs = () => {
       <div className="mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-slate-300/60 to-transparent" />
 
       {/* SECTION: WHAT IS ZOHO */}
-      <section className="px-6 md:px-12 lg:px-16 xl:px-24 py-20 text-center">
-        <div className="mb-6">
-          <img
-            ref={zohoLogoTopRef}
-            src="/logo/zoho.png"
-            alt="Zoho Logo"
-            className="w-40 md:w-48 mx-auto drop-shadow-sm"
-          />
-        </div>
+      <section className="py-20 text-center">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="mb-6">
+            <img
+              ref={zohoLogoTopRef}
+              src="/logo/zoho.png"
+              alt="Zoho Logo"
+              className="w-40 md:w-48 mx-auto drop-shadow-sm"
+            />
+          </div>
 
-        <h2
-          ref={zohoHeadingRef}
-          className="text-3xl md:text-4xl font-extrabold text-slate-900"
-        >
-          <span className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent">
-            What is Zoho?
-          </span>
-        </h2>
+          <h2
+            ref={zohoHeadingRef}
+            className="text-3xl md:text-4xl font-extrabold text-slate-900"
+          >
+            <span className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent">
+              What is Zoho?
+            </span>
+          </h2>
 
-        <p
-          ref={zohoTextRef}
-          className="mx-auto mt-4 max-w-3xl text-[1.05rem] leading-relaxed text-slate-700"
-        >
-          Zoho Corporation is a global technology company offering a suite of
-          50+ cloud applications across CRM, email, finance, projects, and
-          collaboration—built with privacy-first principles and designed to
-          scale from startups to enterprises.
-        </p>
-
-        <div className="mx-auto mt-12 max-w-6xl">
-          <p className="mb-5 text-sm uppercase tracking-wider text-slate-500">
-            Popular Zoho applications
+          <p
+            ref={zohoTextRef}
+            className="mx-auto mt-4 max-w-3xl text-[1.05rem] leading-relaxed text-slate-700"
+          >
+            Zoho Corporation is a global technology company offering a suite of
+            50+ cloud applications across CRM, email, finance, projects, and
+            collaboration — built with privacy-first principles and designed to
+            scale from startups to enterprises.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-6">
-            {products.map(([img, label, link], index) => (
-              <a
-                key={label}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                ref={(el) => {
-                  if (el) productRefs.current[index] = el;
-                }}
-                className="group relative flex flex-col items-center rounded-2xl border border-white/60 bg-white/60 p-4 shadow-md backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br from-white/70 to-transparent" />
-                <img
-                  src={`/logo/${img}`}
-                  alt={label}
-                  className="relative z-[1] mb-2 h-14 w-14 object-contain"
-                />
-                <span className="relative z-[1] text-sm font-semibold text-slate-800">
-                  {label}
-                </span>
-              </a>
-            ))}
+          <div className="mx-auto mt-12 max-w-6xl">
+            <p className="mb-5 text-sm uppercase tracking-wider text-slate-500">
+              Popular Zoho Applications
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-6">
+              {products.map(([img, label, link], index) => (
+                <a
+                  key={label}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ref={(el) => {
+                    if (el) productRefs.current[index] = el;
+                  }}
+                  className="group relative flex flex-col items-center rounded-2xl border border-white/60 bg-white/70 p-4 shadow-md backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br from-white/70 to-transparent" />
+                  <img
+                    src={`/logo/${img}`}
+                    alt={label}
+                    className="relative z-[1] mb-2 h-14 w-14 object-contain"
+                  />
+                  <span className="relative z-[1] text-sm font-semibold text-slate-800">
+                    {label}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@ import CallToAction from "../../components/sections/CallToAction";
 
 const Page = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <HeroSection />
       <ProducSections />
       <TeamSection />
