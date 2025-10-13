@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Middle: Quick Links & Follow Us */}
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8 md:gap-20 w-full md:w-auto text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8 md:gap-38 w-full md:w-auto text-center md:text-left">
             {/* Quick Links */}
             <div className="flex flex-col items-center md:items-start">
               <h3 className="text-lg font-semibold mb-3">Quick Links</h3>

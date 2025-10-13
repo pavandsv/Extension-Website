@@ -24,20 +24,22 @@ const ProductCard = ({ product }) => {
       href={`/extension-details/${product.href}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block w-full h-[280px]" // ✅ Reduced height
+      className="group block w-full h-[360px]" // taller so cover has room
     >
-      <div className="relative bg-white rounded-xl shadow-md hover:shadow-2xl hover:scale-[1.02] transform transition-transform duration-300 p-2 flex flex-col overflow-hidden w-full h-full">
-        {/* Image Section */}
-        <div className="h-[65%] w-full overflow-hidden pt-2">
+      {/* Remove outer padding to allow true full-bleed image */}
+      <div className="relative bg-white rounded-xl shadow-md hover:shadow-2xl hover:scale-[1.02] transform transition-transform duration-300 flex flex-col overflow-hidden w-full h-full p-0">
+        
+        {/* Image Section: full width, no gap */}
+        <div className="h-[68%] w-full overflow-hidden rounded-t-xl">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover rounded-t-xl"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
         {/* Text Section */}
-        <div style={{"padding":"30px"}} className="h-[35%] w-full bg-blue-100 flex flex-col justify-center items-center text-center rounded-b-xl shadow-inner">
+        <div className="h-[32%] w-full bg-blue-100 flex flex-col justify-center items-center text-center rounded-b-xl shadow-inner px-4 py-3">
           <div className="relative w-full">
             <h3
               ref={nameRef}
@@ -46,9 +48,8 @@ const ProductCard = ({ product }) => {
               {product.name}
             </h3>
 
-            {/* Tooltip on hover if truncated */}
             {showNameTooltip && (
-              <div className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-normal max-w-xs w-max text-center pointer-events-none">
+              <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-normal max-w-xs w-max text-center pointer-events-none">
                 {product.name}
               </div>
             )}
@@ -71,6 +72,7 @@ const ProductCard = ({ product }) => {
     </Link>
   );
 };
+
 
 const ProducSections = () => {
   const splitIndex =
