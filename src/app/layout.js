@@ -31,8 +31,8 @@ export default function RootLayout({ children }) {
 
         <Footer />
 
-        {/* Inline Zoho setup script */}
-        <script
+  
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               window.$zoho = window.$zoho || {};
@@ -41,12 +41,12 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* Zoho widget script */}
+       
         <script
           id="zsiqscript"
           src="https://salesiq.zohopublic.com/widget?wc=siqd5554e2b4cb32464c280697bfa50a51cc07229c8920b4b9dc4247500c1733a43"
           defer
-        ></script>
+        ></script> */}
       </body>
     </html>
   );
