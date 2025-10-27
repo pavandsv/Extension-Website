@@ -161,7 +161,7 @@ const products = [
     id: 10,
     name: "Mailchimp for Zoho CRM",
     desc: "The Mailchimp Extension for Zoho CRM seamlessly connects your CRM with Mailchimp, enabling smooth contact sync, campaign tracking, and subscriber management—all within Zoho CRM.",
-    image: "/products/mailchimp.jpeg",
+    image: "/products/mailchimp.png",
     keyfeatures: [
       "Auto-sync contacts between Zoho CRM and Mailchimp.",
       "Manage Mailchimp campaigns with real-time data in CRM.",
@@ -179,7 +179,7 @@ const products = [
     id: 11,
     name: "Xero Sync for Zoho CRM",
     desc: "The Xero Sync for Zoho CRM extension streamlines data flow by syncing contacts, products, and invoices from Zoho CRM to Xero, reducing manual work and boosting accuracy.",
-    image: "/products/xero-sync.jpeg",
+    image: "/products/xero-sync.png",
     keyfeatures: [
       "One-way sync from Zoho CRM to Xero for invoices, contacts, and products.",
       "Create Xero invoices directly from Zoho CRM.",
@@ -196,7 +196,7 @@ const products = [
     id: 12,
     name: "Best Candidate For Zoho Recruit",
     desc: "This Zoho Recruit extension streamlines candidate shortlisting by matching candidate skills with job requirements and presenting top matches with real-time visual insights. It boosts recruiter efficiency and simplifies decision-making.",
-    image: "/products/recruit.jpeg",
+    image: "/products/recruit.png",
     keyfeatures: [
       "Calculates match percentage between job requirements and candidate skills.",
       "Displays top candidates with key details and visual match indicators.",
@@ -214,7 +214,7 @@ const products = [
     id: 13,
     name: "Google Address Finder For Zoho Recruit",
     desc: "Link Google Maps with Zoho Recruit to quickly search, update, and autofill addresses in the Contacts and Client modules—saving time and improving accuracy.",
-    image: "/products/address-recruit.jpeg",
+    image: "/products/address-recruit.png",
     keyfeatures: [
       "Works with both Client and Contact modules.",
       "Update mailing and other addresses individually or together.",

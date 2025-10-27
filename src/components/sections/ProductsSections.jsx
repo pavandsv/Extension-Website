@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
       href={`/extension-details/${product.href}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block w-full h-[360px]" // taller so cover has room
+      className="group block w-full h-[450px]" // taller so cover has room
     >
       {/* Remove outer padding to allow true full-bleed image */}
       <div className="relative bg-white rounded-xl shadow-md hover:shadow-2xl hover:scale-[1.02] transform transition-transform duration-300 flex flex-col overflow-hidden w-full h-full p-0">

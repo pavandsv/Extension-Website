@@ -9,14 +9,16 @@ import Link from "next/link";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
-
-  // ✅ Redirect to /home when path is root
-  useEffect(() => {
-    if (pathname === "/") {
-      router.replace("/home");
+  
+useEffect(() => {
+  if (pathname === "/" && typeof window !== "undefined") {
+    const currentPath = window.location.pathname;
+    if (currentPath === "/") {
+      window.history.replaceState(null, "", "/home");
     }
-  }, [pathname, router]);
+  }
+}, [pathname]);
+
 
   const toggleMenu = () => setMobileMenuOpen((prev) => !prev);
 

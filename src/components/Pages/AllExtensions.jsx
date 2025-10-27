@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
       target="_blank"
       rel="noopener noreferrer"
       // unified card height across the grid
-      className="group block w-full h-[360px] sm:h-[380px] md:h-[400px]"
+      className="group block w-full h-[450px]"
     >
       <div className="relative bg-white rounded-xl shadow-md hover:shadow-2xl hover:scale-[1.03] transform transition-transform duration-300 flex flex-col overflow-hidden w-full h-full p-0">
         {/* Image (full width, no gap) */}
