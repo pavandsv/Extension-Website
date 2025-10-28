@@ -53,29 +53,55 @@ export default function Header() {
               />
             </button>
 
-            {/* Mobile menu (unchanged) */}
+            {/* Mobile menu (fixed) */}
             {mobileMenuOpen && (
               <div className="absolute right-0 top-12 w-64 bg-white rounded-2xl shadow-2xl ring-1 ring-black/5 z-50 animate-slideDown">
                 <nav className="flex flex-col p-4 space-y-2">
-                  {[
-                    { name: "Home", href: "/home" },
-                    { name: "Marketplace", href: "/marketplace" },
-                    { name: "About Us", href: "https://dsvcorp.com.au/about/" },
-                    { name: "Contact Us", href: "https://dsvcorp.com.au/contact/" },
-                  ].map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`block py-2 px-3 rounded-lg font-semibold text-sm transition ${
-                        pathname === item.href
-                          ? "text-indigo-800 bg-indigo-50"
-                          : "text-gray-800 hover:bg-indigo-50"
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                  {/* Internal links use Next.js Link */}
+                  <Link
+                    href="/home"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block py-2 px-3 rounded-lg font-semibold text-sm transition ${
+                      pathname === "/home"
+                        ? "text-indigo-800 bg-indigo-50"
+                        : "text-gray-800 hover:bg-indigo-50"
+                    }`}
+                  >
+                    Home
+                  </Link>
+
+                  <Link
+                    href="/marketplace"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block py-2 px-3 rounded-lg font-semibold text-sm transition ${
+                      pathname === "/marketplace"
+                        ? "text-indigo-800 bg-indigo-50"
+                        : "text-gray-800 hover:bg-indigo-50"
+                    }`}
+                  >
+                    Marketplace
+                  </Link>
+
+                  {/* External links use normal <a> for new tab */}
+                  <a
+                    href="https://dsvcorp.com.au/about/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 px-3 rounded-lg font-semibold text-sm text-gray-800 hover:bg-indigo-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </a>
+
+                  <a
+                    href="https://dsvcorp.com.au/contact/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 px-3 rounded-lg font-semibold text-sm text-gray-800 hover:bg-indigo-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Contact Us
+                  </a>
                 </nav>
               </div>
             )}
@@ -105,31 +131,23 @@ export default function Header() {
             </Link>
 
             {/* Open in new tab */}
-            <Link
+            <a
               href="https://dsvcorp.com.au/about/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-lg font-semibold ${
-                pathname === "/about-us"
-                  ? "text-indigo-800"
-                  : "text-gray-900 hover:text-indigo-800"
-              }`}
+              className="text-lg font-semibold text-gray-900 hover:text-indigo-800"
             >
               About Us
-            </Link>
-            {/* Open in new tab */}
-            <Link
+            </a>
+
+            <a
               href="https://dsvcorp.com.au/contact/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-lg font-semibold ${
-                pathname === "/contact-us"
-                  ? "text-indigo-800"
-                  : "text-gray-900 hover:text-indigo-800"
-              }`}
+              className="text-lg font-semibold text-gray-900 hover:text-indigo-800"
             >
               Contact Us
-            </Link>
+            </a>
           </PopoverGroup>
         </div>
       </nav>
