@@ -178,7 +178,7 @@ export default function ExtensionDetailPage() {
       </section>
 
       {/* Features Section */}
-      <section className="relative z-10 py-16">
+      <section className="relative z-10 py-26">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <h2 className="text-center text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent">

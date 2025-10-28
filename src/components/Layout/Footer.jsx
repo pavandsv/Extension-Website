@@ -6,11 +6,10 @@ export default function Footer() {
       {/* Consistent container like Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 text-center md:text-left">
-
           {/* Left: Company Logos */}
           <div className="flex flex-col items-center md:items-start space-y-5 w-full md:w-auto">
             <a
-              href="https://company-two.com"
+              href="https://fristinetech.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -24,7 +23,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://company-one.com"
+              href="https://dsvcorp.com.au/"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -37,7 +36,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://company-three.com"
+              href="https://fidigital.com.au/"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -54,25 +53,40 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8 md:gap-38 w-full md:w-auto text-center md:text-left">
             {/* Quick Links */}
             <div className="flex flex-col items-center md:items-start">
-              <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
+              <h3 className="text-xl font-semibold mb-3">Quick Links</h3>
+              <ul className="space-y-2 text-gray-300 text-lg">
                 <li>
                   <a href="/" className="hover:text-white">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="hover:text-white">
+                  <a
+                    href="https://dsvcorp.com.au/about/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="/services" className="hover:text-white">
+                  <a
+                    href="https://dsvcorp.com.au/services/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="hover:text-white">
+                  <a
+                    href="https://dsvcorp.com.au/contact/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
                     Contact
                   </a>
                 </li>
@@ -81,19 +95,19 @@ export default function Footer() {
 
             {/* Follow Us */}
             <div className="flex flex-col items-center md:items-start">
-              <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+              <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
               <div className="flex gap-5 justify-center md:justify-start text-gray-400">
                 <a href="#" className="hover:text-white">
-                  <FaFacebook size={20} />
+                  <FaFacebook size={28} />
                 </a>
                 <a href="#" className="hover:text-white">
-                  <FaTwitter size={20} />
+                  <FaTwitter size={28} />
                 </a>
                 <a href="#" className="hover:text-white">
-                  <FaInstagram size={20} />
+                  <FaInstagram size={28} />
                 </a>
                 <a href="#" className="hover:text-white">
-                  <FaLinkedin size={20} />
+                  <FaLinkedin size={28} />
                 </a>
               </div>
             </div>
@@ -101,7 +115,7 @@ export default function Footer() {
 
           {/* Right: Partner */}
           <div className="flex flex-col items-center md:items-end space-y-4 w-full md:w-auto">
-            <h3 className="text-lg font-semibold mb-3">Our Partner</h3>
+            <h3 className="text-xl font-semibold mb-3">Our Partner</h3>
             <a
               href="https://partner-website.com"
               target="_blank"
@@ -111,7 +125,7 @@ export default function Footer() {
               <img
                 src="/logo/zohopartner.jpg"
                 alt="Zoho Partner"
-                className="h-10 object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
+                className="h-12 object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
               />
             </a>
           </div>

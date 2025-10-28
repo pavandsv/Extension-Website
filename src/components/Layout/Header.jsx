@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { PopoverGroup } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -9,30 +9,25 @@ import Link from "next/link";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  
-useEffect(() => {
-  if (pathname === "/" && typeof window !== "undefined") {
-    const currentPath = window.location.pathname;
-    if (currentPath === "/") {
-      window.history.replaceState(null, "", "/home");
-    }
-  }
-}, [pathname]);
 
+  useEffect(() => {
+    if (pathname === "/" && typeof window !== "undefined") {
+      const currentPath = window.location.pathname;
+      if (currentPath === "/") {
+        window.history.replaceState(null, "", "/home");
+      }
+    }
+  }, [pathname]);
 
   const toggleMenu = () => setMobileMenuOpen((prev) => !prev);
 
   return (
     <header className="bg-white sticky top-0 z-50 shadow w-full">
-      <nav
-        aria-label="Global"
-        className="w-full px-4 sm:px-6 lg:px-8"
-      >
-        {/* Center container for balanced layout */}
+      <nav aria-label="Global" className="w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/home" className="block h-10 w-auto overflow-hidden">
+            <Link href="/home" className="block h-12 w-auto overflow-hidden">
               <span className="sr-only">DSV Corp</span>
               <img
                 src="/logo/DSV-Logo-blue.png"
@@ -58,15 +53,15 @@ useEffect(() => {
               />
             </button>
 
-            {/* Animated floating menu card */}
+            {/* Mobile menu (unchanged) */}
             {mobileMenuOpen && (
               <div className="absolute right-0 top-12 w-64 bg-white rounded-2xl shadow-2xl ring-1 ring-black/5 z-50 animate-slideDown">
                 <nav className="flex flex-col p-4 space-y-2">
                   {[
                     { name: "Home", href: "/home" },
-                    { name: "About Us", href: "/about-us" },
                     { name: "Marketplace", href: "/marketplace" },
-                    { name: "Contact Us", href: "/contact-us" },
+                    { name: "About Us", href: "https://dsvcorp.com.au/about/" },
+                    { name: "Contact Us", href: "https://dsvcorp.com.au/contact/" },
                   ].map((item) => (
                     <Link
                       key={item.href}
@@ -90,7 +85,7 @@ useEffect(() => {
           <PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-auto">
             <Link
               href="/home"
-              className={`text-sm font-semibold ${
+              className={`text-lg font-semibold ${
                 pathname === "/home"
                   ? "text-indigo-800"
                   : "text-gray-900 hover:text-indigo-800"
@@ -99,18 +94,8 @@ useEffect(() => {
               Home
             </Link>
             <Link
-              href="/about-us"
-              className={`text-sm font-semibold ${
-                pathname === "/about-us"
-                  ? "text-indigo-800"
-                  : "text-gray-900 hover:text-indigo-800"
-              }`}
-            >
-              About Us
-            </Link>
-            <Link
               href="/marketplace"
-              className={`text-sm font-semibold ${
+              className={`text-lg font-semibold ${
                 pathname === "/marketplace"
                   ? "text-indigo-800"
                   : "text-gray-900 hover:text-indigo-800"
@@ -118,9 +103,26 @@ useEffect(() => {
             >
               Marketplace
             </Link>
+
+            {/* Open in new tab */}
             <Link
-              href="/contact-us"
-              className={`text-sm font-semibold ${
+              href="https://dsvcorp.com.au/about/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-lg font-semibold ${
+                pathname === "/about-us"
+                  ? "text-indigo-800"
+                  : "text-gray-900 hover:text-indigo-800"
+              }`}
+            >
+              About Us
+            </Link>
+            {/* Open in new tab */}
+            <Link
+              href="https://dsvcorp.com.au/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-lg font-semibold ${
                 pathname === "/contact-us"
                   ? "text-indigo-800"
                   : "text-gray-900 hover:text-indigo-800"
