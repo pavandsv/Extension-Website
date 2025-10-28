@@ -321,7 +321,7 @@ const products = [
     id: 19,
     name: "Ticket Locking In Zoho Desk",
     desc: "This extension allows you to lock the ticket detail view in Zoho Desk, preventing agents from taking any action—like sending emails or adding resolutions—until CNT tagging is completed. It ensures proper ticket categorization and enforces SLA compliance before work begins.",
-    image: "/products/ticket-lock.jpeg",
+    image: "/products/ticket-lock.png",
     keyfeatures: [
       "Define your own set of fields for CNT categorization",
       "Efficient SLA tracking and management",
@@ -337,7 +337,7 @@ const products = [
     id: 20,
     name: "Razorpay Extension for Zoho CRM",
     desc: "Connect your Razorpay account with Zoho CRM to seamlessly manage and send payment links directly from your CRM. This extension simplifies the payment process, helping you handle requests efficiently across key modules.",
-    image: "/products/razourpay.jpeg",
+    image: "/products/razorpay.png",
     keyfeatures: [
       "Send payment links: Generate and send Razorpay payment links from Deals, Invoices, Sales Orders, and Quotes modules.",
       "Resend payment links: Easily resend links if they expire or aren’t received.",
@@ -388,7 +388,7 @@ const products = [
     id: 23,
     name: "Auto Currency Update For Zoho Books",
     desc: "The Auto Currency Update extension for Zoho Books provides hourly exchange rate updates, ensuring accurate multi-currency transactions and financial insights in real time.",
-    image: "/products/auto-currency.jpeg",
+    image: "/products/auto-currency.png",
     keyfeatures: [
       "Hourly updates for real-time currency exchange rates.",
       "View and compare historical rates by date within Zoho Books.",
@@ -491,6 +491,24 @@ const products = [
     buynow:
       "https://marketplace.zoho.com/app/crm/twilio-sms-and-whatsapp-extension-for-zoho-crm#overview",
     href: "/twilio-sms-and-whatsapp-extension-for-zoho-crm",
+  },
+  {
+    id: 29,
+    name: "Price Book with Products Export for Zoho CRM",
+    desc: "The Price Book with Products Export for Zoho CRM extension helps you download complete Price Book information, along with all its associated products, in just one click. Instead of exporting Price Books and products separately, this extension combines them into a single, structured CSV file. With support for large Price Books containing thousands of products, the extension ensures smooth exporting without additional setup. It integrates seamlessly inside Zoho CRM, providing a clean and simple user experience.",
+    image: "/products/pricebook-crm.png",
+    keyfeatures: [
+      "Export Price Book details along with associated products in one file.",
+      "Automatically generate and download CSVs inside Zoho CRM.",
+      "Enjoy a simple, user-friendly interface with no extra configuration.",
+      "Save time by eliminating the need for multiple manual exports.",
+    ],
+    product: "crm",
+    helpdoc:
+      "https://dsvcorp.com.au/help-documentation/help-documentation-price-book-with-products-export-for-zoho-crm/",
+    buynow:
+      "https://marketplace.zoho.com/app/crm/price-book-with-products-export-for-zoho-crm",
+    href: "/price-book-with-products-export-for-zoho-crm",
   },
 ];
 
