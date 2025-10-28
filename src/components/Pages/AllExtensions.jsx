@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link
-      href={`/extension-details/${product.href}`}
+      href={`/extension-details${product.href}`}
       target="_blank"
       rel="noopener noreferrer"
       // unified card height across the grid
