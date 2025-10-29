@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white w-full py-10">
+    <footer className="bg-gray-900 text-white w-full py-10 text-[16px]">
       {/* Consistent container like Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 text-center md:text-left">
@@ -54,7 +54,7 @@ export default function Footer() {
             {/* Quick Links */}
             <div className="flex flex-col items-center md:items-start">
               <h3 className="text-xl font-semibold mb-3">Quick Links</h3>
-              <ul className="space-y-2 text-gray-300 text-lg">
+              <ul className="space-y-2 text-gray-300">
                 <li>
                   <a href="/" className="hover:text-white">
                     Home

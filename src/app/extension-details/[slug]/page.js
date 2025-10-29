@@ -119,7 +119,7 @@ export default function ExtensionDetailPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative z-10 py-20">
+      <section className="relative z-10 pt-20 pb-10 md:py-20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center gap-14">
           {/* Left - Text */}
           <div className="hero-text flex-1">
@@ -138,7 +138,7 @@ export default function ExtensionDetailPage() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="hero-cta mt-8 flex flex-wrap gap-4">
+            <div className="hero-cta mt-8 flex flex-col sm:flex-row sm:justify-start justify-center items-center gap-4">
               <a
                 href={productData.helpdoc}
                 target="_blank"
@@ -170,7 +170,7 @@ export default function ExtensionDetailPage() {
               <img
                 src={productData.image}
                 alt={String(productData.name)}
-                className="w-96 md:w-[30rem] rounded-2xl shadow-2xl ring-1 ring-white/10"
+                className="w-80 sm:w-96 md:w-[30rem] rounded-2xl shadow-2xl ring-1 ring-white/10"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function ExtensionDetailPage() {
       </section>
 
       {/* Features Section */}
-      <section className="relative z-10 py-26">
+      <section className="relative z-10 pt-6 pb-26 md:pt-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <h2 className="text-center text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent">

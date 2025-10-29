@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/home" className="block h-12 w-auto overflow-hidden">
               <span className="sr-only">DSV Corp</span>
               <img
-                src="/logo/DSV-Logo-blue.png"
+                src="/logo/DSV-Logo.png"
                 alt="DSV Corp"
                 className="h-full object-contain"
               />
@@ -108,47 +108,49 @@ export default function Header() {
           </div>
 
           {/* Desktop Links */}
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-auto">
-            <Link
-              href="/home"
-              className={`text-lg font-semibold ${
-                pathname === "/home"
-                  ? "text-indigo-800"
-                  : "text-gray-900 hover:text-indigo-800"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/marketplace"
-              className={`text-lg font-semibold ${
-                pathname === "/marketplace"
-                  ? "text-indigo-800"
-                  : "text-gray-900 hover:text-indigo-800"
-              }`}
-            >
-              Marketplace
-            </Link>
+<PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-auto">
+  <Link
+    href="/home"
+    className={`text-[16px] font-semibold ${
+      pathname === "/home"
+        ? "text-indigo-800"
+        : "text-gray-900 hover:text-indigo-800"
+    }`}
+  >
+    Home
+  </Link>
 
-            {/* Open in new tab */}
-            <a
-              href="https://dsvcorp.com.au/about/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg font-semibold text-gray-900 hover:text-indigo-800"
-            >
-              About Us
-            </a>
+  <Link
+    href="/marketplace"
+    className={`text-[16px] font-semibold ${
+      pathname === "/marketplace"
+        ? "text-indigo-800"
+        : "text-gray-900 hover:text-indigo-800"
+    }`}
+  >
+    Marketplace
+  </Link>
 
-            <a
-              href="https://dsvcorp.com.au/contact/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg font-semibold text-gray-900 hover:text-indigo-800"
-            >
-              Contact Us
-            </a>
-          </PopoverGroup>
+  {/* Open in new tab */}
+  <a
+    href="https://dsvcorp.com.au/about/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[16px] font-semibold text-gray-900 hover:text-indigo-800"
+  >
+    About Us
+  </a>
+
+  <a
+    href="https://dsvcorp.com.au/contact/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[16px] font-semibold text-gray-900 hover:text-indigo-800"
+  >
+    Contact Us
+  </a>
+</PopoverGroup>
+
         </div>
       </nav>
     </header>
