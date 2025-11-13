@@ -10,15 +10,6 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    if (pathname === "/" && typeof window !== "undefined") {
-      const currentPath = window.location.pathname;
-      if (currentPath === "/") {
-        window.history.replaceState(null, "", "/home");
-      }
-    }
-  }, [pathname]);
-
   const toggleMenu = () => setMobileMenuOpen((prev) => !prev);
 
   return (
@@ -27,7 +18,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/home" className="block h-12 w-auto overflow-hidden">
+            <Link href="/" className="block h-12 w-auto overflow-hidden">
               <span className="sr-only">DSV Corp</span>
               <img
                 src="/logo/DSV-Logo.png"
@@ -59,10 +50,10 @@ export default function Header() {
                 <nav className="flex flex-col p-4 space-y-2">
                   {/* Internal links use Next.js Link */}
                   <Link
-                    href="/home"
+                    href="/"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block py-2 px-3 rounded-lg font-semibold text-sm transition ${
-                      pathname === "/home"
+                      pathname === "/"
                         ? "text-indigo-800 bg-indigo-50"
                         : "text-gray-800 hover:bg-indigo-50"
                     }`}
@@ -108,49 +99,48 @@ export default function Header() {
           </div>
 
           {/* Desktop Links */}
-<PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-auto">
-  <Link
-    href="/home"
-    className={`text-[16px] font-semibold ${
-      pathname === "/home"
-        ? "text-indigo-800"
-        : "text-gray-900 hover:text-indigo-800"
-    }`}
-  >
-    Home
-  </Link>
+          <PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-auto">
+            <Link
+              href="/"
+              className={`text-[16px] font-semibold ${
+                pathname === "/"
+                  ? "text-indigo-800"
+                  : "text-gray-900 hover:text-indigo-800"
+              }`}
+            >
+              Home
+            </Link>
 
-  <Link
-    href="/marketplace"
-    className={`text-[16px] font-semibold ${
-      pathname === "/marketplace"
-        ? "text-indigo-800"
-        : "text-gray-900 hover:text-indigo-800"
-    }`}
-  >
-    Marketplace
-  </Link>
+            <Link
+              href="/marketplace"
+              className={`text-[16px] font-semibold ${
+                pathname === "/marketplace"
+                  ? "text-indigo-800"
+                  : "text-gray-900 hover:text-indigo-800"
+              }`}
+            >
+              Marketplace
+            </Link>
 
-  {/* Open in new tab */}
-  <a
-    href="https://dsvcorp.com.au/about/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[16px] font-semibold text-gray-900 hover:text-indigo-800"
-  >
-    About Us
-  </a>
+            {/* Open in new tab */}
+            <a
+              href="https://dsvcorp.com.au/about/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[16px] font-semibold text-gray-900 hover:text-indigo-800"
+            >
+              About Us
+            </a>
 
-  <a
-    href="https://dsvcorp.com.au/contact/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[16px] font-semibold text-gray-900 hover:text-indigo-800"
-  >
-    Contact Us
-  </a>
-</PopoverGroup>
-
+            <a
+              href="https://dsvcorp.com.au/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[16px] font-semibold text-gray-900 hover:text-indigo-800"
+            >
+              Contact Us
+            </a>
+          </PopoverGroup>
         </div>
       </nav>
     </header>
