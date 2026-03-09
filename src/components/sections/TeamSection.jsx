@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
   { name: "Pratik Modi", role: "CEO", img: "/team/pratikmodi.webp" },
-  { name: "Paras Shah", role: "CTO", img: "/team/paras.webp" },
+  { name: "Paras Shah", role: "CTO", img: "/team/paras.png" },
   { name: "Nishant Modi", role: "Operations Manager", img: "/team/nishant.webp" },
 ];
 
