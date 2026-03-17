@@ -1,14 +1,19 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+"use client";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
   { name: "Pratik Modi", role: "CEO", img: "/team/pratikmodi.webp" },
   { name: "Paras Shah", role: "CTO", img: "/team/paras.png" },
-  { name: "Nishant Modi", role: "Operations Manager", img: "/team/nishant.webp" },
+  {
+    name: "Nishant Modi",
+    role: "Operations Manager",
+    img: "/team/nishant.webp",
+  },
 ];
 
 const TeamSection = () => {
@@ -22,13 +27,13 @@ const TeamSection = () => {
         el,
         { x: direction, opacity: 0 },
         {
-          scrollTrigger: { trigger: el, start: 'top 85%' },
+          scrollTrigger: { trigger: el, start: "top 85%" },
           x: 0,
           opacity: 1,
           duration: 0.8,
           delay: i * 0.1,
-          ease: 'power3.out',
-        }
+          ease: "power3.out",
+        },
       );
     });
   }, []);
@@ -46,7 +51,8 @@ const TeamSection = () => {
 
           <div className="bg-blue-100 rounded-lg py-4 px-6 sm:px-10 mb-12 shadow-sm">
             <p className="text-base sm:text-lg text-gray-900">
-              With over 20 years of combined experience, we’ve got a well-seasoned team at the helm.
+              With over 20 years of combined experience, we’ve got a
+              well-seasoned team at the helm.
             </p>
           </div>
 
@@ -60,17 +66,21 @@ const TeamSection = () => {
               >
                 {/* Image - Edge-to-Edge */}
                 <div className="w-full">
-                  <img
+                  <Image
                     src={member.img}
                     alt={member.name}
+                    width={300}
+                    height={320}
                     className="w-full h-[320px] object-cover"
-                    loading="lazy"
+                    priority={i === 0}
                   />
                 </div>
 
                 {/* Info Section */}
                 <div className="bg-blue-100 py-4 px-4">
-                  <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {member.name}
+                  </h3>
                   <p className="text-blue-800 uppercase tracking-wide text-sm font-semibold">
                     {member.role}
                   </p>

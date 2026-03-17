@@ -41,10 +41,10 @@ const HeroSection = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div
           ref={heroRef}
-          className="relative max-w-7xl mx-auto min-h-[85vh] flex items-center justify-center overflow-hidden rounded-[56px] bg-[#f3f4f6]"
+          className="relative max-w-7xl mx-auto min-h-[85vh] flex items-center justify-center overflow-hidden rounded-[15px] bg-[#f3f4f6]"
         >
           {/* background image wrapper */}
-          <div className="absolute inset-0 rounded-[56px] overflow-hidden">
+          <div className="absolute inset-0 rounded-[15px] overflow-hidden">
             <img
               src="/logo/hero-bg.png"
               alt="Zoho Extensions Hero Background"
