@@ -1,4 +1,5 @@
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,10 +16,12 @@ export default function Footer() {
               className="block"
               style={{ marginLeft: "-5px" }}
             >
-              <img
+              <Image
                 src="/logo/FristineInfoLogo.png"
                 alt="Fristine Infotech"
-                className="h-10 object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
+                width={160}
+                height={40}
+                className="h-10 w-auto object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
               />
             </a>
 
@@ -28,10 +31,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="block"
             >
-              <img
+              <Image
                 src="/logo/DSV-Corp-Logo.png"
                 alt="DSV Corp"
-                className="h-10 object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
+                width={160}
+                height={40}
+                className="h-10 w-auto object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
               />
             </a>
 
@@ -41,10 +46,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="block"
             >
-              <img
+              <Image
                 src="/logo/FI-Digital-Logo.png"
                 alt="FI Digital"
-                className="h-10 object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
+                width={160}
+                height={40}
+                className="h-10 w-auto object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
               />
             </a>
           </div>
@@ -122,10 +129,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="block"
             >
-              <img
+              <Image
                 src="/logo/zohopartner.jpg"
                 alt="Zoho Partner"
-                className="h-12 object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
+                width={180}
+                height={48}
+                className="h-12 w-auto object-contain hover:opacity-80 transition-opacity mx-auto md:mx-0"
               />
             </a>
           </div>

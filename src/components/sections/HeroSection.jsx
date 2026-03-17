@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const HeroSection = () => {
   const heroRef = useRef(null);
@@ -11,7 +12,7 @@ const HeroSection = () => {
       gsap.fromTo(
         heroRef.current,
         { opacity: 0, y: -80 },
-        { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
       );
 
       gsap.fromTo(
@@ -23,7 +24,7 @@ const HeroSection = () => {
           duration: 1,
           ease: "power3.out",
           delay: 0.2,
-        }
+        },
       );
     });
 
@@ -45,13 +46,16 @@ const HeroSection = () => {
         >
           {/* background image wrapper */}
           <div className="absolute inset-0 rounded-[15px] overflow-hidden">
-            <img
+            <Image
               src="/logo/hero-bg.png"
               alt="Zoho Extensions Hero Background"
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
               style={{
                 filter: "brightness(0.35)",
               }}
+              priority
             />
           </div>
 

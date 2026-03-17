@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { PopoverGroup } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,10 +21,13 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="block h-12 w-auto overflow-hidden">
               <span className="sr-only">DSV Corp</span>
-              <img
+              <Image
                 src="/logo/DSV-Logo.png"
                 alt="DSV Corp"
-                className="h-full object-contain"
+                width={160}
+                height={48}
+                className="h-full w-auto object-contain"
+                priority
               />
             </Link>
           </div>

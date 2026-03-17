@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { useEffect, useRef, useState } from "react";
 import products from "@/app/data/Products";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProductCard = ({ product }) => {
   const nameRef = useRef(null);
@@ -28,13 +29,14 @@ const ProductCard = ({ product }) => {
     >
       {/* Remove outer padding to allow true full-bleed image */}
       <div className="relative bg-white rounded-xl shadow-md hover:shadow-2xl hover:scale-[1.02] transform transition-transform duration-300 flex flex-col overflow-hidden w-full h-full p-0">
-        
         {/* Image Section: full width, no gap */}
-        <div className="h-[68%] w-full overflow-hidden rounded-t-xl">
-          <img
+        <div className="relative h-[68%] w-full overflow-hidden rounded-t-xl">
+          <Image
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover object-center"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-center"
           />
         </div>
 
@@ -72,7 +74,6 @@ const ProductCard = ({ product }) => {
     </Link>
   );
 };
-
 
 const ProducSections = () => {
   const splitIndex =

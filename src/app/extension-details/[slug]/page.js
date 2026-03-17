@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import products from "@/app/data/Products";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -167,10 +168,12 @@ export default function ExtensionDetailPage() {
           <div className="hero-img flex-1 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-cyan-400/30 to-blue-500/30 blur-xl" />
-              <img
+              <Image
                 src={productData.image}
                 alt={String(productData.name)}
-                className="w-80 sm:w-96 md:w-[30rem] rounded-2xl shadow-2xl ring-1 ring-white/10"
+                width={480}
+                height={480}
+                className="w-80 sm:w-96 md:w-[30rem] h-auto rounded-2xl shadow-2xl ring-1 ring-white/10"
               />
             </div>
           </div>
